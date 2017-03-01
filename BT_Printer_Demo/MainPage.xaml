@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="BT_Printer_Demo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BT_Printer_Demo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" Text="BT Printer Demo" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <ListView x:Name="myListView"
+          ScrollViewer.HorizontalScrollMode="Enabled" 
+          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+          ScrollViewer.VerticalScrollMode="Auto"
+          ScrollViewer.VerticalScrollBarVisibility="Hidden" Margin="10,111,10,225" ItemClick="myListView_ItemClick" IsItemClickEnabled="True">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <x:String>Please wait...</x:String>
+        </ListView>
+    </Grid>
+</Page>
